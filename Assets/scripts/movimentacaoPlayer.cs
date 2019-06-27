@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class movimentacaoPlayer : MonoBehaviour
 {
+    static int cont = 2;
     public GameObject barreiraL;
     public GameObject barreiraR;
     public GameObject barreiraUp;
     public GameObject barreiraDown;
-
+    public GameObject cInimigo;
 
     public int vidas;
-
+    private float tempoInicio;
     public GameObject prefabProjetil;
     public float velocidadex;
     public float velocidadey;
@@ -19,6 +21,7 @@ public class movimentacaoPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tempoInicio = Time.time;
         vidas = 3;
         velocidade = 20f;
         velocidadex = velocidade;
@@ -29,7 +32,20 @@ public class movimentacaoPlayer : MonoBehaviour
     void Update()
     {
         velocidade = 20f;
-        
+        if (Time.time - tempoInicio > 10)
+        {
+            Debug.Log("Destruiu");
+            Destroy(cInimigo);
+
+        }
+        if (Time.time - tempoInicio > 14 & cont == 2)
+        {
+            cont--;
+            UnityEngine.SceneManagement.SceneManager.LoadScene("fase2");
+
+
+        }
+
         if (Input.GetKey(KeyCode.W)) {
             velocidadey = velocidade;
             if (BarreiraUp()) {
