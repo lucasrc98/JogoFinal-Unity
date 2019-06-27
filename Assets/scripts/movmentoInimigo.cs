@@ -1,0 +1,49 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class movmentoInimigo : MonoBehaviour
+{
+    public float velocidade;
+    //float velocidadey;
+    // Start is called before the first frame update
+    public GameObject Player;
+    float direcao;
+    float d;
+    bool flag; 
+    void Start() 
+    {
+        flag = false;
+        velocidade = this.gameObject.transform.position.x;
+        direcao = 0;
+        d = (15.9f * Time.deltaTime);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (flag == false)
+        {
+            transform.position = new Vector3((velocidade + direcao), Player.transform.position.y * 0.4f, 0);
+            direcao = direcao - d;
+        }
+        else {
+          transform.Translate(0, -0.2f, -0.9f);
+            this.gameObject.GetComponent<Rigidbody>().mass = 0;
+           // transform.Rotate(2f, 0, 0); 
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "player")
+        {
+          // this.gameObject.transform.Rotate(Vector3.up, -10f * Time.deltaTime ) ;
+            //direcao = 0;
+          //  d = d * -1;
+           flag = true;
+            Debug.Log("colidio");
+
+        }
+    }
+}
