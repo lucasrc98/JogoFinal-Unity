@@ -21,7 +21,7 @@ public class movimentacaoPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /* vidas = 3; */
+        vidas = 3; 
         velocidade = 20f;
         velocidadex = velocidade;
         velocidadey = velocidade;
@@ -76,7 +76,7 @@ public class movimentacaoPlayer : MonoBehaviour
 
         } */
          
-        /* gameOver(); */ 
+        gameOver(); 
 
 
     }

@@ -19,6 +19,8 @@ public class PontuacaoScript : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+
+        gameOver();
         
     }
     public void incrementaPontos(){
@@ -31,4 +33,14 @@ public class PontuacaoScript : MonoBehaviour
         vidasUI.text = vidas.ToString();
         Debug.Log(vidas);
     }
+
+    void gameOver()
+    {
+        if (vidas <= 0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TelaFimDeJogo");
+        }
+    }
+
 }
+
