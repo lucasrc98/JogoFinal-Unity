@@ -19,7 +19,7 @@ public class movimentacaoPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidas = 2;
+        vidas = 3;
         velocidade = 20f;
         velocidadex = velocidade;
         velocidadey = velocidade;
@@ -137,7 +137,7 @@ public class movimentacaoPlayer : MonoBehaviour
 
     void gameOver()
     {
-        if (vidas == -1)
+        if (vidas <= 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("TelaFimDeJogo");
         }
