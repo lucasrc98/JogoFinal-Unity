@@ -10,9 +10,12 @@ public class movmentoInimigo : MonoBehaviour
     public GameObject Player;
     float direcao;
     float d;
-    bool flag; 
+    bool flag;
+    float inicio;
+    
     void Start() 
     {
+        inicio = Time.time;
         flag = false;
         velocidade = this.gameObject.transform.position.x;
         direcao = 0;
@@ -22,9 +25,14 @@ public class movmentoInimigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.time - inicio > 10.0f) {
+            Destroy(this.gameObject);
+
+        }
         if (flag == false)
         {
-            transform.position = new Vector3((velocidade + direcao), Player.transform.position.y * 0.4f, 0);
+            //transform.position = new Vector3((velocidade + direcao), Player.transform.position.y * 0.4f, 0);
+            transform.position = new Vector3((velocidade + direcao), this.gameObject.transform.position.y, 0);
             direcao = direcao - d;
         }
         else {
