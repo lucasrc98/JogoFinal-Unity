@@ -17,7 +17,7 @@ public class movimentoFundo : MonoBehaviour
         transform.position += new Vector3(-1* Time.deltaTime, 0, 0);
     }
     void OnTriggerEnter2D(Collider2D outro)
-    {
+    { 
         if (outro.transform.tag == "backmover")
         {
             float largura = GetComponent<BoxCollider2D>().size.x;

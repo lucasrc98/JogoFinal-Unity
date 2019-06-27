@@ -50,13 +50,14 @@ public class movmentoInimigo : MonoBehaviour
     {
         if(collision.gameObject.tag == "player")
         {
-          // this.gameObject.transform.Rotate(Vector3.up, -10f * Time.deltaTime ) ;
+            // this.gameObject.transform.Rotate(Vector3.up, -10f * Time.deltaTime ) ;
             //direcao = 0;
-          //  d = d * -1;
-          // flag = true;
-            Destroy(this.gameObject.GetComponent<Rigidbody>());
+            //  d = d * -1;
+            // flag = true;
+            //Destroy(this.gameObject.GetComponent<Rigidbody>());
+            Destroy(this.gameObject);
             Debug.Log("colidio");
 
         }
-    }
+    } 
 }

@@ -16,9 +16,9 @@ public class TelaInicial : MonoBehaviour
         
     }
     public void ChamaCena1() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("fase1");
     }
-
+     
     public void SairJogo() {
         ///23.90093
         Application.Quit();    

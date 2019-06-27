@@ -53,7 +53,7 @@ public class CriarInimigo : MonoBehaviour
             posi = posicaoAleatoria();
             if (posi == 4) {
                 this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, -18, 0);
-                lancarInimigo(this.inimigo);
+                lancarInimigo(this.inimigo); 
             }
         }
         

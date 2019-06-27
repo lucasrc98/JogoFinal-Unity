@@ -22,6 +22,6 @@ public class TelaFimDeJogo : MonoBehaviour
 
     public void sairJogo()
     {
-        Application.Quit();
+        Application.Quit(); 
     }
 }

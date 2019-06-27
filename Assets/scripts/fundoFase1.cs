@@ -35,6 +35,6 @@ public class fundoFase1 : MonoBehaviour
             GetComponent<BoxCollider2D>().transform.position = posicao;
         }
     }
-    
+     
 
 }
