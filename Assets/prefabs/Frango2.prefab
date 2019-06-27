@@ -1422,6 +1422,7 @@ GameObject:
   - component: {fileID: 753496865306881556}
   - component: {fileID: 7117007472564572985}
   - component: {fileID: 1725281784284577344}
+  - component: {fileID: -3203179502418755690}
   m_Layer: 0
   m_Name: Inimigo2
   m_TagString: Untagged
@@ -1504,3 +1505,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.987175, z: 2.0787497}
   m_Center: {x: 3.2767889e-15, y: 0.3122695, z: -0.539375}
+--- !u!114 &-3203179502418755690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114022153177688827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a497ae369223d44b838af163ef3daf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 0
+  Player: {fileID: 0}

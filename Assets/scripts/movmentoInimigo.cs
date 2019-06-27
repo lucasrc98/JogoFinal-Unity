@@ -38,6 +38,10 @@ public class movmentoInimigo : MonoBehaviour
         else {
           transform.Translate(0, -0.2f, -0.9f);
             this.gameObject.GetComponent<Rigidbody>().mass = 0;
+            if (Time.time - inicio > 5f)
+            {
+                Destroy(this.gameObject);
+            }
            // transform.Rotate(2f, 0, 0); 
         }
     }
@@ -49,7 +53,8 @@ public class movmentoInimigo : MonoBehaviour
           // this.gameObject.transform.Rotate(Vector3.up, -10f * Time.deltaTime ) ;
             //direcao = 0;
           //  d = d * -1;
-           flag = true;
+          // flag = true;
+            Destroy(this.gameObject.GetComponent<Rigidbody>());
             Debug.Log("colidio");
 
         }

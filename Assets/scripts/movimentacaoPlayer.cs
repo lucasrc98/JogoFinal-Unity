@@ -4,46 +4,61 @@ using UnityEngine;
 
 public class movimentacaoPlayer : MonoBehaviour
 {
+    public GameObject barreiraL;
+    public GameObject barreiraR;
+    public GameObject barreiraUp;
+    public GameObject barreiraDown;
+
+
+    public int vidas;
+
     public GameObject prefabProjetil;
     public float velocidadex;
     public float velocidadey;
+    public float velocidade; 
     // Start is called before the first frame update
     void Start()
     {
-        velocidadex = 10.0f;
-        velocidadey = 10.0f;
+        vidas = 3;
+        velocidade = 20f;
+        velocidadex = velocidade;
+        velocidadey = velocidade;
     }
 
     // Update is called once per frame
     void Update()
     {
+        velocidade = 20f;
         
-        if(Input.GetKey(KeyCode.W)) {
-            velocidadey = 10f;
-            if (this.gameObject.transform.position.y >= 13.73365f) {
+        if (Input.GetKey(KeyCode.W)) {
+            velocidadey = velocidade;
+            if (BarreiraUp()) {
                 velocidadey = 0;
             }
                 transform.Translate(0, velocidadey * Time.deltaTime, 0);
         }
         if (Input.GetKey(KeyCode.S)){
-            velocidadey = 10f;
-            if(this.gameObject.transform.position.y <= -12.51851f)
+            velocidadey = velocidade;
+            if(BarreiraDown())
             {
                 velocidadey = 0;
             }
             transform.Translate(0, -velocidadey * Time.deltaTime, 0);
         }
         if (Input.GetKey(KeyCode.A)){
-            velocidadex = 10f;
-            if(this.gameObject.transform.position.x <= -49.93784f)
-            {
+            velocidadex = velocidade;
+            //if(this.gameObject.transform.position.x <= -49.93784f)
+            //{
+            //   velocidadex = 0;
+            //}
+            if (BarreiraL()) {
                 velocidadex = 0;
             }
             transform.Translate(velocidadex * Time.deltaTime, 0, 0);
         }
         if (Input.GetKey(KeyCode.D)){
-            velocidadex = 10f;
-            if(this.gameObject.transform.position.x >= 52.5f)
+            velocidadex = velocidade;
+            if(BarreiraR())
             {
                 velocidadex = 0;
             }
@@ -59,6 +74,72 @@ public class movimentacaoPlayer : MonoBehaviour
 
         }
 
+        gameOver(); 
 
+
+    }
+
+   private bool BarreiraL()
+    {
+        if (transform.position.x <= barreiraL.transform.position.x)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    private bool BarreiraR()
+    {
+        if (transform.position.x >= barreiraR.transform.position.x)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private bool BarreiraUp()
+    {
+        if (transform.position.y >= barreiraUp.transform.position.y)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private bool BarreiraDown()
+    {
+        if (transform.position.y <= barreiraDown.transform.position.y)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag =="inimigo")
+        {
+            vidas = vidas - 1;
+            Debug.Log("qtd = "+vidas); 
+        }
+    }
+
+    void gameOver()
+    {
+        if (vidas == -1)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TelaFimDeJogo");
+        }
     }
 }

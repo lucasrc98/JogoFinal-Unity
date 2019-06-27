@@ -16,7 +16,7 @@ public class CriarInimigo : MonoBehaviour
     void Update()
     {
         float t = Time.time - startTime;
-        float duracao = 3.0f;
+        float duracao = 2.0f;
         int posi; 
         
         if (t > duracao)
@@ -48,6 +48,14 @@ public class CriarInimigo : MonoBehaviour
                 lancarInimigo(this.inimigo);
             }
          }
+
+        if (t > duracao) {
+            posi = posicaoAleatoria();
+            if (posi == 4) {
+                this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, -18, 0);
+                lancarInimigo(this.inimigo);
+            }
+        }
         
 
     }
