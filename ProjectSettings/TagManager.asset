@@ -8,6 +8,8 @@ TagManager:
   - backmover
   - limite
   - inimigo
+  - Halter1
+  - Halter2
   layers:
   - Default
   - TransparentFX

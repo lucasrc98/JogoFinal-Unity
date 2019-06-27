@@ -71,5 +71,17 @@ public class movmentoInimigo : MonoBehaviour
             Debug.Log("Halter 1 colidido");
 
         }
+        if(collision.gameObject.tag == "Halter2")
+        {
+            // this.gameObject.transform.Rotate(Vector3.up, -10f * Time.deltaTime ) ;
+            //direcao = 0;
+            //  d = d * -1;
+            // flag = true;
+            //Destroy(this.gameObject.GetComponent<Rigidbody>());
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+            Debug.Log("Halter 2 colidido");
+
+        }
     } 
 }
