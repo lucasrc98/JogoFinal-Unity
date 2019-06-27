@@ -65,14 +65,14 @@ public class movimentacaoPlayer : MonoBehaviour
             transform.Translate(-velocidadex * Time.deltaTime, 0, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+  /*       if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject go = Instantiate(prefabProjetil) as GameObject;
             go.transform.position = this.transform.position + (this.gameObject.transform.forward * 2.0f);
             go.transform.rotation = this.gameObject.transform.rotation;
             go.GetComponent<Rigidbody>().AddForce(go.transform.forward * 100.0f);
 
-        }
+        } */
          
         gameOver(); 
 

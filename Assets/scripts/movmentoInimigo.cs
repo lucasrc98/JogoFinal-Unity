@@ -56,7 +56,19 @@ public class movmentoInimigo : MonoBehaviour
             // flag = true;
             //Destroy(this.gameObject.GetComponent<Rigidbody>());
             Destroy(this.gameObject);
-            Debug.Log("colidio");
+            Debug.Log("colidio com o player");
+
+        }
+        if(collision.gameObject.tag == "Halter1")
+        {
+            // this.gameObject.transform.Rotate(Vector3.up, -10f * Time.deltaTime ) ;
+            //direcao = 0;
+            //  d = d * -1;
+            // flag = true;
+            //Destroy(this.gameObject.GetComponent<Rigidbody>());
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+            Debug.Log("Halter 1 colidido");
 
         }
     } 
