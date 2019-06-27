@@ -10,8 +10,9 @@ public class movimentacaoPlayer : MonoBehaviour
     public GameObject barreiraR;
     public GameObject barreiraUp;
     public GameObject barreiraDown;
-
-
+    public GameObject cInimigo;
+    static int cont = 2;
+    private float tempoInicio;
     public int vidas;
 
     public GameObject prefabProjetil;
@@ -21,6 +22,7 @@ public class movimentacaoPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tempoInicio = Time.time;
         vidas = 3; 
         velocidade = 20f;
         velocidadex = velocidade;
@@ -31,6 +33,16 @@ public class movimentacaoPlayer : MonoBehaviour
     void Update()
     {
         velocidade = 20f;
+        if (Time.time - tempoInicio > 60)
+        {
+            Debug.Log("Destruiu");
+            Destroy(cInimigo);
+        }
+        if (Time.time - tempoInicio > 65 && cont == 2) {
+            cont--;
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TelaInicialScene");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("TelaInicialScene");
+        }
         
         if (Input.GetKey(KeyCode.W)) {
             velocidadey = velocidade;
