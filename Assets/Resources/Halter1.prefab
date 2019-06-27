@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3304126338994946336}
   - component: {fileID: 6350506971007549653}
   - component: {fileID: 8658740230951068821}
+  - component: {fileID: -4819594193681357506}
   m_Layer: 0
   m_Name: Halter1
   m_TagString: Halter1
@@ -109,3 +110,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.050702684, y: 0.027849723, z: 0.028581588}
   m_Center: {x: 0, y: 0.0000000013969836, z: 0.0003659315}
+--- !u!114 &-4819594193681357506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883874649663895036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5682bf16e1c69984a941dd9785a84394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

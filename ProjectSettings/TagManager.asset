@@ -10,6 +10,8 @@ TagManager:
   - inimigo
   - Halter1
   - Halter2
+  - BordaDireita
+  - BordaEsquerda
   layers:
   - Default
   - TransparentFX
