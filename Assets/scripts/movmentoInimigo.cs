@@ -66,9 +66,11 @@ public class movmentoInimigo : MonoBehaviour
             //  d = d * -1;
             // flag = true;
             //Destroy(this.gameObject.GetComponent<Rigidbody>());
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().incrementaPontos();
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
             Debug.Log("Halter 1 colidido");
+            
 
         }
         if(collision.gameObject.tag == "Halter2")
@@ -78,6 +80,7 @@ public class movmentoInimigo : MonoBehaviour
             //  d = d * -1;
             // flag = true;
             //Destroy(this.gameObject.GetComponent<Rigidbody>());
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().incrementaPontos();
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
             Debug.Log("Halter 2 colidido");

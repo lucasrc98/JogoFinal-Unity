@@ -5,7 +5,7 @@ using UnityEngine;
 public class tiro : MonoBehaviour
 {
     float inicio;
-
+    //public GameObject barreiraR;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +18,17 @@ public class tiro : MonoBehaviour
     void Update()
     {
 
-        this.gameObject.transform.Translate(-Vector3.right* 0.2f);
-        if ((Time.time - inicio) > 2.0f)
+       // this.gameObject.transform.Translate(-Vector3.right* 0.2f);
+       if ((Time.time - inicio) > 1.5f)
         {
             Destroy(this.gameObject);
-        }
+        } 
+
+        //if ((Time.time - inicio) > 2.0f)
+       // {
+       //     Destroy(this.gameObject);
+       // }
 
     }
+    
 }

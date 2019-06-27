@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class movimentacaoPlayer : MonoBehaviour
 {
     public GameObject barreiraL;
@@ -19,7 +21,7 @@ public class movimentacaoPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidas = 3;
+        /* vidas = 3; */
         velocidade = 20f;
         velocidadex = velocidade;
         velocidadey = velocidade;
@@ -74,7 +76,7 @@ public class movimentacaoPlayer : MonoBehaviour
 
         } */
          
-        gameOver(); 
+        /* gameOver(); */ 
 
 
     }
@@ -130,8 +132,10 @@ public class movimentacaoPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag =="inimigo")
         {
-            vidas = vidas - 1;
-            Debug.Log("qtd = "+vidas); 
+
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().decrementaVidas();
+            /* vidas = vidas - 1;
+            Debug.Log("qtd = "+vidas);  */
         }
     }
 

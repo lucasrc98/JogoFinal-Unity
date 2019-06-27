@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 3462917527519616806}
   - component: {fileID: 3968661949977811935}
   - component: {fileID: 2502059837615752961}
+  - component: {fileID: -6350652495773448629}
   m_Layer: 0
-  m_Name: Halter2
+  m_Name: Halter Grande
   m_TagString: Halter2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,3 +110,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.050702684, y: 0.027849736, z: 0.028581599}
   m_Center: {x: 0, y: 0.0000000014020397, z: 0.00036593163}
+--- !u!114 &-6350652495773448629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896402972795071482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5682bf16e1c69984a941dd9785a84394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
