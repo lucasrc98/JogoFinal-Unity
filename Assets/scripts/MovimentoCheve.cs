@@ -15,11 +15,13 @@ public class MovimentoCheve : MonoBehaviour
     public float velocidadey;
     public float aumento;
     // Start is called before the first frame update
+    public int resistencia;
     void Start()
     {   
         velocidadex = 0.4f;
         velocidadey = 0.4f;
         aumento = 0.01f;
+        resistencia = 10;
         
     }
 
@@ -47,5 +49,19 @@ public class MovimentoCheve : MonoBehaviour
              velocidadey = aumento + velocidadey * -1;
          }
      }
+
+      void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "player"){
+             GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().decrementaVidas();
+        }
+        if(collision.gameObject.tag == "Halter1"){
+            resistencia--;
+            Destroy(collision.gameObject);
+             if(resistencia <= 0){
+                UnityEngine.SceneManagement.SceneManager.LoadScene("prefase1");
+             }
+        }
+    }
 
 }
