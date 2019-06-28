@@ -23,13 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/prefase3.unity
     guid: f11a79d607efc9048b178eefb00c6b66
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/fase3.unity
+    guid: 28c6451876effe34289a5d34f06e94b2
+  - enabled: 1
+    path: Assets/Scenes/telafinalVitoria.unity
+    guid: f0d7726c087ca9047875a3edee42d0f4
   - enabled: 1
     path: Assets/Scenes/TelaFimDeJogo.unity
     guid: da2c7684263918a47ab74638214cc96c
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

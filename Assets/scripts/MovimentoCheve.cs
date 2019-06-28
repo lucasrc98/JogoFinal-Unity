@@ -21,7 +21,7 @@ public class MovimentoCheve : MonoBehaviour
         velocidadex = 0.4f;
         velocidadey = 0.4f;
         aumento = 0.01f;
-        resistencia = 10;
+        resistencia = 25;
         
     }
 
@@ -34,13 +34,13 @@ public class MovimentoCheve : MonoBehaviour
 
       void rebater(){
 
-         if((int)this.gameObject.transform.position.x == (int)R.transform.position.x - 1){
+         /* if((int)this.gameObject.transform.position.x == (int)R.transform.position.x - 1){
               velocidadex = aumento + velocidadex * -1;
               if(leo.GetComponent<SpriteRenderer>().flipX == true){
                   leo.GetComponent<SpriteRenderer>().flipX = !leo.GetComponent<SpriteRenderer>().flipX;
               }
              
-         } 
+         } */
          if( (int)this.gameObject.transform.position.x == (int)L.transform.position.x + 1){
              velocidadex = aumento + velocidadex * -1;
              leo.GetComponent<SpriteRenderer>().flipX = !leo.GetComponent<SpriteRenderer>().flipX;
@@ -57,10 +57,42 @@ public class MovimentoCheve : MonoBehaviour
         }
         if(collision.gameObject.tag == "Halter1"){
             resistencia--;
+GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().incrementaPontosChefe();
+GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().decrementaPorcentagem();
+
+            Destroy(collision.gameObject);
+             if(resistencia <= 0){
+                UnityEngine.SceneManagement.SceneManager.LoadScene("telafinalVitoria");
+             }
+        }
+        if(collision.gameObject.tag == "Halter2"){
+            resistencia--;
+GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().incrementaPontosChefe();
+GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().decrementaPorcentagem2();
+
             Destroy(collision.gameObject);
              if(resistencia <= 0){
                 UnityEngine.SceneManagement.SceneManager.LoadScene("prefase1");
              }
+        }
+        if(collision.gameObject.name == L.name){
+            velocidadex = aumento + velocidadex * -1;
+            leo.GetComponent<SpriteRenderer>().flipX = !leo.GetComponent<SpriteRenderer>().flipX;
+              
+        }
+        if(collision.gameObject.name == Up.name){
+            velocidadey = aumento + velocidadey * -1;
+             
+        }
+        if(collision.gameObject.name == Down.name){
+            velocidadey = aumento + velocidadey * -1;
+             
+        }
+         if(collision.gameObject.name == R.name){
+            velocidadex = aumento + velocidadex * -1;
+              if(leo.GetComponent<SpriteRenderer>().flipX == true){
+                  leo.GetComponent<SpriteRenderer>().flipX = !leo.GetComponent<SpriteRenderer>().flipX;
+              }
         }
     }
 

@@ -190,9 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Proseguir
-
-'
+  m_Text: Menu inicial
 --- !u!222 &54519631
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -320,7 +318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88, y: -86}
+  m_AnchoredPosition: {x: 92, y: -86}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278687480
@@ -691,9 +689,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Parab\xE9ns! \n\nVoc\xEA passou da segunda fase\n\nAgora prepare-se.. \xC0
-    frente est\xE1 o monstro dos monstros\n\nN\xE3o fique parado, se n\xE3o ele te
-    mandara para as profundesas do catabolismo!\n"
+  m_Text: "Parab\xE9ns! \n\nVoc\xEA concluiu o caminho sua jornada diaria!\n\nAgora
+    pode fazer sua refei\xE7\xE3o e dormir seu sono anabolico!!"
 --- !u!222 &967305388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -785,7 +782,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 880892785}
-        m_MethodName: ChamaTerceiraFase
+        m_MethodName: ChamaCena1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

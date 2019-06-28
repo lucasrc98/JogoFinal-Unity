@@ -1242,7 +1242,7 @@ GameObject:
   - component: {fileID: 7827360262570739741}
   - component: {fileID: 8367505229746516697}
   m_Layer: 0
-  m_Name: Frango2 2
+  m_Name: Frango2
   m_TagString: inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

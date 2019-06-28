@@ -8,13 +8,19 @@ public class PontuacaoScript : MonoBehaviour
 {
     public Text vidasUI;
     public Text pontosUI;
+    public Text porecentagemUI;
+
     int pontos;
     int vidas;
+    int porecentagemLocal;
+    
      static int cont = 3;
     // Start is called before the first frame update
     void Start(){
         pontos = 0;
         vidas = 3;
+        porecentagemLocal = 19;
+
     }
 
     // Update is called once per frame
@@ -33,12 +39,26 @@ public class PontuacaoScript : MonoBehaviour
         pontosUI.text = pontos.ToString();
         Debug.Log(pontos);
     }
+     public void incrementaPontosChefe(){
+        this.pontos = this.pontos + 60;
+        pontosUI.text = pontos.ToString();
+        Debug.Log(pontos);
+    }
     public void decrementaVidas(){
         this.vidas = this.vidas - 1;
         vidasUI.text = vidas.ToString();
         Debug.Log(vidas);
     }
 
+    public void decrementaPorcentagem(){
+        this.porecentagemLocal = this.porecentagemLocal - 1;
+        porecentagemUI.text = porecentagemLocal.ToString();
+    }
+     public void decrementaPorcentagem2(){
+         this.porecentagemLocal = this.porecentagemLocal - 2;
+        porecentagemUI.text = porecentagemLocal.ToString();
+    }
+    
     void gameOver()
     {
         if (vidas <= 0)
