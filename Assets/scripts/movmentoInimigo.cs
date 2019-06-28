@@ -67,6 +67,7 @@ public class movmentoInimigo : MonoBehaviour
             // flag = true;
             //Destroy(this.gameObject.GetComponent<Rigidbody>());
             GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().incrementaPontos();
+            GetComponent<AudioSource>().Play();
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
             Debug.Log("Halter 1 colidido");

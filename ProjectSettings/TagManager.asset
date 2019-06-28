@@ -12,6 +12,7 @@ TagManager:
   - Halter2
   - BordaDireita
   - BordaEsquerda
+  - MusicaController
   layers:
   - Default
   - TransparentFX

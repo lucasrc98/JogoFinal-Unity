@@ -24,7 +24,7 @@ public class PontuacaoScript : MonoBehaviour
         
     }
     public void incrementaPontos(){
-        this.pontos = this.pontos + 1;
+        this.pontos = this.pontos + 20;
         pontosUI.text = pontos.ToString();
         Debug.Log(pontos);
     }

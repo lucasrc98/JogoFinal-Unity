@@ -146,6 +146,7 @@ public class movimentacaoPlayer : MonoBehaviour
         {
 
             GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().decrementaVidas();
+
             /* vidas = vidas - 1;
             Debug.Log("qtd = "+vidas);  */
         }
