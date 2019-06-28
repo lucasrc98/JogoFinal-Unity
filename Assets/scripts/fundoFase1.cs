@@ -10,6 +10,8 @@ public class fundoFase1 : MonoBehaviour
     {
         numeroBack = 6.868333f;
         numeroBack = gameObject.transform.localScale.x;
+
+        numeroBack = 6.868333f;
     }
 
     // Update is called once per frame
