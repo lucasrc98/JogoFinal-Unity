@@ -190,9 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Proseguir
-
-'
+  m_Text: "Come\xE7ar\n"
 --- !u!222 &54519631
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -655,8 +653,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.6, y: 13}
-  m_SizeDelta: {x: 160, y: 137.2}
+  m_AnchoredPosition: {x: 6, y: 30.25}
+  m_SizeDelta: {x: 306, y: 158.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967305387
 MonoBehaviour:
@@ -681,7 +679,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
