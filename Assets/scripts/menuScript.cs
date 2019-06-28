@@ -11,7 +11,7 @@ public class menuScript : MonoBehaviour
     
     private void Update(){
 
-        if(Input.GetKey(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape)){
             isPaused = !isPaused;
         }
         if (isPaused){
