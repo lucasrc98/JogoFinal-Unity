@@ -122,4 +122,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5682bf16e1c69984a941dd9785a84394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barreiraR: {fileID: 0}
+  barreira: {fileID: 1392401916540055149, guid: 42b2dd3a7432ccf4c81014d90ea4d2d5,
+    type: 3}

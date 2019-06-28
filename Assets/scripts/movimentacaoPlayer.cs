@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.SceneManagement;
-
+ 
 public class movimentacaoPlayer : MonoBehaviour
 {
     public GameObject barreiraL;
@@ -13,7 +13,7 @@ public class movimentacaoPlayer : MonoBehaviour
     public GameObject cInimigo;
     static int cont = 2;
     private float tempoInicio;
-    public int vidas;
+   // public int vidas;
 
     public GameObject prefabProjetil;
     public float velocidadex;
@@ -23,7 +23,7 @@ public class movimentacaoPlayer : MonoBehaviour
     void Start()
     {
         tempoInicio = Time.time;
-        vidas = 3; 
+       // vidas = 3; 
         velocidade = 20f;
         velocidadex = velocidade;
         velocidadey = velocidade;
@@ -33,7 +33,7 @@ public class movimentacaoPlayer : MonoBehaviour
     void Update()
     {
         velocidade = 20f;
-        if (Time.time - tempoInicio > 60)
+       /* if (Time.time - tempoInicio > 60)
         {
             Debug.Log("Destruiu");
             Destroy(cInimigo);
@@ -43,7 +43,7 @@ public class movimentacaoPlayer : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene("prefase2");
             //UnityEngine.SceneManagement.SceneManager.LoadScene("TelaInicialScene");
         }
-        
+         */
         if (Input.GetKey(KeyCode.W)) {
             velocidadey = velocidade;
             if (BarreiraUp()) {
@@ -88,7 +88,7 @@ public class movimentacaoPlayer : MonoBehaviour
 
         } */
          
-        gameOver(); 
+       // gameOver(); 
 
 
     }
@@ -152,11 +152,11 @@ public class movimentacaoPlayer : MonoBehaviour
         }
     }
 
-    void gameOver()
+   /* void gameOver()
     {
         if (vidas <= 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("TelaFimDeJogo");
         }
-    }
+    }*/
 }

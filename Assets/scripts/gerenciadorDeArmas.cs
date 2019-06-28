@@ -16,7 +16,7 @@ public class AtiraHalter1: MonoBehaviour, Arma{
         GameObject halter1 = Instantiate (Resources.Load("Halter1", typeof(GameObject))) 
         as GameObject;
         halter1.transform.position = posicaoHalter2;
-        halter1.GetComponent<Rigidbody>().AddForce(Vector3.right*3000f);
+        halter1.GetComponent<Rigidbody>().AddForce(Vector3.right*2000f);
     }
 }
 

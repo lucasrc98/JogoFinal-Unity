@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class tiro : MonoBehaviour
-{
+{ 
+    public GameObject barreira;
     float inicio;
     //public GameObject barreiraR;
     // Start is called before the first frame update
@@ -29,6 +30,20 @@ public class tiro : MonoBehaviour
        //     Destroy(this.gameObject);
        // }
 
+    }
+    private void posi(Collision collision)
+    {
+        if(collision.gameObject.tag =="inimigo"){
+
+        }
+        if (barreira.transform.position.x >= this.gameObject.transform.position.x)
+        {
+            Destroy(this.gameObject);
+           // GameObject.FindGameObjectWithTag("GameController").GetComponent<PontuacaoScript> ().incrementaPontos();
+
+            /* vidas = vidas - 1;
+            Debug.Log("qtd = "+vidas);  */
+        }
     }
     
 }

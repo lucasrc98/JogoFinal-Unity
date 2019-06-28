@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CriarInimigo : MonoBehaviour
+public class CriarInimigo2 : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject inimigo;
-    public GameObject inimigo2;
+    public GameObject inimigo3;
+    public GameObject inimigoGuiado;
     private float startTime;
     void Start()
     {
@@ -78,12 +78,12 @@ public class CriarInimigo : MonoBehaviour
 
     GameObject inimigoAleatorio(){
         int r;
-        r = Random.Range(1,7);
-        if(r <= 3){
-            return inimigo2;
+        r = Random.Range(1,10);
+        if(r <= 5){
+            return inimigo3;
         }
         else{
-            return inimigo;
+            return inimigoGuiado;
         }
     }
 }

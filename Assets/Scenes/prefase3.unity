@@ -367,7 +367,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 880892785}
-        m_MethodName: SairJogo
+        m_MethodName: sairJogo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 880892780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09a2dda337ebc4c478a4ca4956f7a1fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 970659eb6cfc5324d9c331c2b8c86696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &967305385
@@ -783,7 +783,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 880892785}
-        m_MethodName: ChamaSegundaFase
+        m_MethodName: chamarTelaInicial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

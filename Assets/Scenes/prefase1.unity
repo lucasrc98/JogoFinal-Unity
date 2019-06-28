@@ -691,7 +691,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Parab\xE9ns! \n\nVoc\xEA passou da primeira fase"
+  m_Text: "Seja Bem Vindo \n\nVoc\xEA precisa fazer pelo menos 1300 \"fibras\" para
+    passar pro proximo n\xEDvel"
 --- !u!222 &967305388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -783,7 +784,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 880892785}
-        m_MethodName: ChamaSegundaFase
+        m_MethodName: ChamaPrimeiraFase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
