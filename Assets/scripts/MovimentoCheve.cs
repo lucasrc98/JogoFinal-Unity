@@ -47,5 +47,13 @@ public class MovimentoCheve : MonoBehaviour
              velocidadey = aumento + velocidadey * -1;
          }
      }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "player") {
+
+            Destroy(this.gameObject);
+        }
+
+    }
 
 }
