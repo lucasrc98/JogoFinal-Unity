@@ -38,9 +38,9 @@ public class movimentacaoPlayer : MonoBehaviour
             Debug.Log("Destruiu");
             Destroy(cInimigo);
         }
-        if (Time.time - tempoInicio > 65 && cont == 2) {
+        if (Time.time - tempoInicio > 62 && cont == 2) {
             cont--;
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TelaInicialScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("prefase2");
             //UnityEngine.SceneManagement.SceneManager.LoadScene("TelaInicialScene");
         }
         
